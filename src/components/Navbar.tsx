@@ -13,8 +13,8 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
+    { label: 'Accueil', href: '/' },
     { label: 'Services', href: '#services' },
-    { label: 'Process', href: '#process' },
     { label: 'Portfolio', href: '#portfolio' },
     { label: 'Contact', href: '#contact' },
   ]
@@ -41,13 +41,23 @@ export default function Navbar() {
           {/* ── Desktop nav ── */}
           <nav className="hidden items-center gap-9 md:flex">
             {navLinks.map(({ label, href }) => (
-              <a
-                key={label}
-                href={href}
-                className="text-sm font-medium text-gray-500 transition-colors duration-200 hover:text-gray-900"
-              >
-                {label}
-              </a>
+              href.startsWith('/') ? (
+                <Link
+                  key={label}
+                  href={href}
+                  className="text-sm font-medium text-gray-500 transition-colors duration-200 hover:text-gray-900"
+                >
+                  {label}
+                </Link>
+              ) : (
+                <a
+                  key={label}
+                  href={href}
+                  className="text-sm font-medium text-gray-500 transition-colors duration-200 hover:text-gray-900"
+                >
+                  {label}
+                </a>
+              )
             ))}
           </nav>
 

@@ -280,124 +280,166 @@ function AboutSection() {
 
 /* ═══════════════════════════════════════════════════════
    SECTION 3 — DIAGNOSTIC
-   Editorial large-number vertical path — not cards.
-   Each problem: giant muted number + title + description.
+   Split editorial layout:
+   Left  = sticky headline + subtext + CTA
+   Right = flowing problem list — icon + title + body,
+           connected by a soft vertical guide line,
+           no numbers, no cards, hover choreography.
 ════════════════════════════════════════════════════════ */
 function DiagnosticSection() {
   const problems = [
     {
-      number: '01',
+      icon: (
+        <svg className="h-[18px] w-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.6}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 0 1 15 0Z" />
+        </svg>
+      ),
       title: 'Profil Google Business mal optimisé',
       body: 'Catégories incorrectes, photos absentes, services non renseignés — Google ne vous montre pas en priorité.',
     },
     {
-      number: '02',
+      icon: (
+        <svg className="h-[18px] w-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.6}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 8.25h3m-3 3h3m-3 3h1.5" />
+        </svg>
+      ),
       title: 'Site lent / pas adapté mobile',
       body: 'La majorité de vos clients viennent du téléphone. Un site lent ou cassé = clients perdus immédiatement.',
     },
     {
-      number: '03',
+      icon: (
+        <svg className="h-[18px] w-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.6}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+        </svg>
+      ),
       title: 'Pas de bouton « Appeler » visible',
-      body: "Si un visiteur doit chercher votre numéro, vous perdez la moitié des contacts potentiels.",
+      body: 'Si un visiteur doit chercher votre numéro, vous perdez la moitié des contacts potentiels.',
     },
     {
-      number: '04',
+      icon: (
+        <svg className="h-[18px] w-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.6}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.563.563 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+        </svg>
+      ),
       title: 'Manque de preuves : avis, réalisations',
       body: "Sans avis récents ni exemples de travaux, les visiteurs ne font pas confiance et vont chez un concurrent.",
     },
     {
-      number: '05',
+      icon: (
+        <svg className="h-[18px] w-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.6}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+        </svg>
+      ),
       title: 'Pages services confuses',
       body: "Si le visiteur ne comprend pas ce que vous faites en 5 secondes, il part. C'est aussi simple que ça.",
     },
   ]
 
   return (
-    /* Extra top padding accommodates the About section's overlapping strip */
+    /* pt-40/52 accommodates the About section's overlapping metadata strip */
     <section id="diagnostic" className="relative overflow-hidden bg-[#F8F7F5] pb-24 pt-40 lg:pb-36 lg:pt-52">
 
-      {/* Ambient glow top-right */}
+      {/* Ambient glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute right-0 top-0 h-[500px] w-[500px] -translate-y-1/3 translate-x-1/3 rounded-full bg-blue-50/70"
-        style={{ filter: 'blur(80px)' }}
+        className="pointer-events-none absolute right-0 top-0 h-[520px] w-[520px] -translate-y-1/3 translate-x-1/3 rounded-full bg-blue-50/80"
+        style={{ filter: 'blur(90px)' }}
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-0 left-0 h-[360px] w-[360px] -translate-x-1/4 translate-y-1/3 rounded-full bg-blue-50/50"
+        style={{ filter: 'blur(70px)' }}
       />
 
       <div className="relative z-10 mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
 
-        {/* ── Section header: asymmetric two-col ── */}
-        <div className="mb-20 grid gap-8 lg:grid-cols-[1fr_1fr]">
-          <div>
-            <div className="mb-6 flex items-center gap-3">
+        {/* ── Split layout ── */}
+        <div className="grid gap-16 lg:grid-cols-[0.82fr_1.18fr] lg:gap-20 xl:gap-28">
+
+          {/* LEFT: sticky headline + subtext + CTA */}
+          <div className="lg:sticky lg:top-28 lg:self-start">
+
+            <div className="mb-7 flex items-center gap-3">
               <span className="text-xs font-bold uppercase tracking-[0.26em] text-blue-600">Diagnostic</span>
               <span className="h-px w-10 bg-blue-200" />
             </div>
+
             <h2
-              className="font-black leading-[1.06] tracking-tight text-gray-900"
-              style={{ fontSize: 'clamp(2rem, 4vw, 3.6rem)' }}
+              className="mb-7 font-black leading-[1.04] tracking-tight text-gray-900"
+              style={{ fontSize: 'clamp(2.2rem, 4vw, 3.8rem)' }}
             >
-              Ce que je corrige<br />
-              le plus souvent
+              Ce que<br />
+              je corrige<br />
+              le plus<br />
+              souvent
             </h2>
-          </div>
-          <div className="lg:flex lg:items-end">
-            <p className="max-w-[340px] text-lg leading-relaxed text-gray-500">
+
+            <p className="mb-10 max-w-[300px] text-base leading-relaxed text-gray-500">
               Ces 5 problèmes reviennent sur{' '}
-              <strong className="font-bold text-gray-900">90&nbsp;% des sites locaux</strong>{' '}
+              <strong className="font-semibold text-gray-800">
+                90&nbsp;% des sites locaux
+              </strong>{' '}
               que j&apos;audite.
             </p>
-          </div>
-        </div>
 
-        {/* ── Flowing diagnostic path ── */}
-        <div className="space-y-0">
-          {problems.map((p, idx) => (
-            <div
-              key={p.number}
-              className="group relative grid items-start gap-0 border-t border-gray-200 py-10 last:border-b lg:grid-cols-[160px_1fr] lg:gap-12"
-            >
-              {/* Large background number (decorative) */}
-              <div
-                aria-hidden="true"
-                className="absolute left-0 top-1/2 -translate-y-1/2 select-none font-black leading-none text-gray-100 transition-colors duration-300 group-hover:text-blue-50"
-                style={{ fontSize: 'clamp(5rem, 8vw, 7.5rem)' }}
+            {/* CTA */}
+            <div className="space-y-3 border-t border-gray-200 pt-8">
+              <p className="text-sm font-semibold text-gray-800">Je corrige tout ça</p>
+              <a
+                href="#contact"
+                className="group inline-flex items-center gap-2 text-sm font-semibold text-blue-600 transition-all hover:gap-3"
               >
-                {p.number}
-              </div>
-
-              {/* Number label (visible, left col) */}
-              <div className="relative z-10 mb-3 lg:mb-0">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border-2 border-blue-100 bg-white text-xs font-black text-blue-600 shadow-sm transition-all duration-300 group-hover:border-blue-600 group-hover:bg-blue-600 group-hover:text-white">
-                  {p.number}
-                </span>
-              </div>
-
-              {/* Title + body (right col) */}
-              <div className="relative z-10">
-                <h3 className="mb-2 text-base font-bold text-gray-900 transition-colors group-hover:text-blue-700 lg:text-xl">
-                  {p.title}
-                </h3>
-                <p className="max-w-2xl text-sm leading-relaxed text-gray-500 lg:text-base">
-                  {p.body}
-                </p>
-              </div>
+                Découvrir les services
+                <svg
+                  className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
             </div>
-          ))}
-        </div>
+          </div>
 
-        {/* ── CTA row ── */}
-        <div className="mt-14 flex flex-wrap items-center gap-6">
-          <span className="text-base font-bold text-gray-800">Je corrige tout ça</span>
-          <div className="h-px w-12 bg-gray-300" aria-hidden="true" />
-          <a
-            href="#contact"
-            className="group inline-flex items-center gap-2 text-sm font-semibold text-blue-600 transition-all hover:gap-3"
-          >
-            Découvrir les services
-            <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
+          {/* RIGHT: flowing problem list */}
+          <div className="relative">
+
+            {/* Soft vertical connecting line behind icons */}
+            <div
+              aria-hidden="true"
+              className="absolute left-[19px] top-10 h-[calc(100%-5rem)] w-px bg-gradient-to-b from-blue-200/70 via-blue-100/40 to-transparent"
+            />
+
+            <ul className="space-y-3" role="list">
+              {problems.map((p, idx) => (
+                <li
+                  key={p.title}
+                  className="group relative -mx-3 flex gap-4 rounded-2xl bg-white/60 px-4 py-5 ring-1 ring-gray-200/70 backdrop-blur-[2px] transition-all duration-300 ease-out hover:bg-white/85 hover:shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:ring-gray-200/90 sm:-mx-5 sm:px-6"
+                >
+                  {/* Left accent line — slides in on hover */}
+                  <div
+                    aria-hidden="true"
+                    className="absolute left-0 top-5 h-[calc(100%-2.5rem)] w-[3px] origin-top scale-y-0 rounded-full bg-blue-500 opacity-0 transition-all duration-300 ease-out group-hover:scale-y-100 group-hover:opacity-100"
+                  />
+
+                  {/* Icon container */}
+                  <div className="relative z-10 mt-0.5 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-white text-gray-500 shadow-sm ring-1 ring-gray-200/80 transition-all duration-300 group-hover:bg-blue-600 group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-600/20 group-hover:ring-blue-600">
+                    {p.icon}
+                  </div>
+
+                  {/* Text block */}
+                  <div className="flex-1">
+                    <h3 className="mb-1.5 text-[0.98rem] font-bold leading-snug text-gray-900 transition-colors duration-200 group-hover:text-gray-950 lg:text-[1.02rem]">
+                      {p.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-gray-600 transition-colors duration-200 group-hover:text-gray-700">
+                      {p.body}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
