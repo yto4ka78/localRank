@@ -1,6 +1,3 @@
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
-
 /* ═══════════════════════════════════════════════════════
    SECTION 1 — HERO
    Full-viewport editorial layout: off-white left + image right,
@@ -627,15 +624,11 @@ function ContactSection() {
 ════════════════════════════════════════════════════════ */
 export default function HomePage() {
   return (
-    <>
-      <Navbar />
-      <main className="overflow-x-hidden">
-        <HeroSection />
-        <AboutSection />
-        <DiagnosticSection />
-        <ContactSection />
-      </main>
-      <Footer />
-    </>
+    <main className="overflow-x-hidden">
+      <HeroSection />
+      <AboutSection />
+      <DiagnosticSection />
+      <ContactSection />
+    </main>
   )
 }
