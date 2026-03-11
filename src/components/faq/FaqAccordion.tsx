@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 /* ─────────────────────────────────────────────────────────
    TYPES
@@ -250,7 +250,9 @@ function FaqItem({
           {/* Question */}
           <p
             className={`text-[0.92rem] font-semibold leading-snug transition-colors duration-200 lg:text-[0.97rem] ${
-              isOpen ? "text-gray-900" : "text-gray-700 group-hover:text-gray-900"
+              isOpen
+                ? "text-gray-900"
+                : "text-gray-700 group-hover:text-gray-900"
             }`}
           >
             {item.question}
@@ -284,10 +286,6 @@ export default function FaqAccordion() {
   const [activeCategory, setActiveCategory] = useState<string>("all");
   const [openId, setOpenId] = useState<string | null>(null);
   const [fadeKey, setFadeKey] = useState(0);
-  const [sliderStyle, setSliderStyle] = useState<{ left: number; width: number }>({ left: 0, width: 0 });
-
-  const tabRefs = useRef<Map<string, HTMLButtonElement>>(new Map());
-  const trackRef = useRef<HTMLDivElement>(null);
 
   const filtered =
     activeCategory === "all"
@@ -298,32 +296,7 @@ export default function FaqAccordion() {
     setActiveCategory(id);
     setOpenId(null);
     setFadeKey((k) => k + 1);
-
-    const btn = tabRefs.current.get(id);
-    const track = trackRef.current;
-    if (btn && track) {
-      const trackRect = track.getBoundingClientRect();
-      const btnRect = btn.getBoundingClientRect();
-      setSliderStyle({
-        left: btnRect.left - trackRect.left + track.scrollLeft,
-        width: btnRect.width,
-      });
-      btn.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
-    }
   }
-
-  useEffect(() => {
-    const btn = tabRefs.current.get(activeCategory);
-    const track = trackRef.current;
-    if (btn && track) {
-      const trackRect = track.getBoundingClientRect();
-      const btnRect = btn.getBoundingClientRect();
-      setSliderStyle({
-        left: btnRect.left - trackRect.left + track.scrollLeft,
-        width: btnRect.width,
-      });
-    }
-  }, [activeCategory]);
 
   function handleToggle(id: string) {
     setOpenId((prev) => (prev === id ? null : id));
@@ -333,31 +306,10 @@ export default function FaqAccordion() {
     <div>
       {/* ── Category tab bar ── */}
       <div className="relative mb-12 -mx-1">
-        {/* Fade mask for overflow scroll on mobile */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-[#F8F7F5] to-transparent z-10 lg:hidden" />
-
-        {/* Track wrapper with border-bottom */}
-        <div
-          ref={trackRef}
-          className="relative flex gap-0 overflow-x-auto px-1"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-        >
-          {/* Sliding indicator */}
-          <div
-            className="pointer-events-none absolute bottom-0 h-[2px] rounded-full bg-blue-600 transition-all duration-300 ease-out"
-            style={{ left: sliderStyle.left, width: sliderStyle.width }}
-          />
-
-          {/* Bottom border line */}
-          <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-gray-200" />
-
+        <div className="relative flex flex-wrap gap-x-1 gap-y-1 border-b border-gray-200 pb-px">
           {categories.map((cat) => (
             <button
               key={cat.id}
-              ref={(el) => {
-                if (el) tabRefs.current.set(cat.id, el);
-                else tabRefs.current.delete(cat.id);
-              }}
               onClick={() => handleCategoryChange(cat.id)}
               className={`relative flex-shrink-0 px-4 pb-3 pt-1 text-[11px] font-bold uppercase tracking-[0.14em] transition-colors duration-200 ${
                 activeCategory === cat.id

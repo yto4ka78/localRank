@@ -34,7 +34,7 @@ export default function Navbar() {
             href="/"
             className="text-xl font-black tracking-tight text-gray-900 transition-opacity hover:opacity-80"
           >
-            Local<span className="text-blue-600">Rank</span>
+            Sitnikov <span className="text-blue-600">Web</span>
           </Link>
 
           {/* ── Desktop nav ── */}

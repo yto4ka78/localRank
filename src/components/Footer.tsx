@@ -44,7 +44,7 @@ export default function Footer() {
               href="/"
               className="mb-5 block text-xl font-black tracking-tight text-white transition-opacity hover:opacity-80"
             >
-              Local<span className="text-blue-500">Rank</span>
+              Sitnikov <span className="text-blue-500">Web</span>
             </Link>
 
             <p className="mb-7 max-w-[280px] text-sm leading-relaxed text-gray-400">
@@ -111,7 +111,7 @@ export default function Footer() {
         {/* ── Bottom bar ── */}
         <div className="flex flex-col items-start justify-between gap-2 border-t border-gray-800/60 py-6 sm:flex-row sm:items-center">
           <p className="text-xs text-gray-700">
-            &copy; 2026 LocalRank&nbsp;&middot;&nbsp;Orléans&nbsp;&middot;&nbsp;Tous droits réservés
+            &copy; 2026 Sitnikov Web&nbsp;&middot;&nbsp;Orléans&nbsp;&middot;&nbsp;Tous droits réservés
           </p>
           <p className="text-xs text-gray-700">
             Fait avec soin pour les entreprises locales

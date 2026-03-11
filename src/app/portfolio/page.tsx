@@ -30,7 +30,7 @@ const featured: Project = {
   tags: ["Google Business", "Local SEO", "Site Web"],
   result: "+63 % d'appels",
   image:
-    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80",
+    "/portfolio/portfolio-hero.png",
 };
 
 const showcase: Project[] = [
@@ -174,9 +174,9 @@ function MosaicItemLabel({ project }: { project: MosaicProject }) {
 ════════════════════════════════════════════════════════ */
 function HeroSection() {
   const stats = [
-    { value: "12+", label: "Projets réalisés" },
+    { value: "5+", label: "Projets réalisés" },
     { value: "+52 %", label: "d'appels en moyenne" },
-    { value: "8 sem.", label: "Pour le top 3 local" },
+    { value: "Sur mesure", label: "Chaque projet est unique" },
   ];
 
   return (
@@ -221,7 +221,7 @@ function HeroSection() {
         <div className="mb-10 flex items-center gap-3">
           <span className="h-px w-10 bg-blue-600" />
           <span className="text-xs font-bold uppercase tracking-[0.26em] text-blue-600">
-            LocalRank
+            Sitnikov Web
           </span>
         </div>
 
@@ -323,7 +323,7 @@ function HeroSection() {
                     />
                   </svg>
                   <span className="truncate text-[10px] text-gray-400">
-                    localrank.fr/portfolio
+                    https://eriksitnikov.fr/portfolio
                   </span>
                 </div>
               </div>
@@ -331,7 +331,7 @@ function HeroSection() {
               {/* Project screenshot */}
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+                  src="/portfolio/portfolio-hero.png"
                   alt="Aperçu d'un projet"
                   className="block w-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                   style={{ height: "380px" }}
@@ -344,9 +344,7 @@ function HeroSection() {
               </div>
             </div>
 
-            {/* ── Floating badge 1: Google Maps Top 3 ──
-                Positioned at left edge — bleeds into title column.
-                z-30 ensures it sits above the title text (z-20). ── */}
+            {/* ── Floating badge 1: left edge (bleeds into title column) ── */}
             <div className="absolute -left-1 top-[27%] z-30">
               <div className="flex items-center gap-2.5 rounded-xl bg-white px-4 py-[10px] shadow-[0_8px_28px_rgba(0,0,0,0.09)] ring-1 ring-gray-100/90">
                 <div className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-blue-600 shadow-md shadow-blue-600/30">
@@ -360,22 +358,16 @@ function HeroSection() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2.2}
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2.2}
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>
                 </div>
                 <div>
                   <p className="text-[11px] font-black leading-none text-gray-900">
-                    Top 3
+                    Réalisations
                   </p>
                   <p className="mt-[3px] text-[10px] leading-none text-gray-400">
-                    Google Maps
+                    SEO & Sites web
                   </p>
                 </div>
               </div>
@@ -386,19 +378,19 @@ function HeroSection() {
               <div className="flex items-center gap-1.5 rounded-full bg-white px-3.5 py-[7px] shadow-lg shadow-black/8 ring-1 ring-gray-100/90">
                 <span className="h-[7px] w-[7px] flex-shrink-0 rounded-full bg-green-500" />
                 <span className="text-[11px] font-bold text-gray-700">
-                  12 projets
+                  5 projets
                 </span>
               </div>
             </div>
 
-            {/* ── Floating badge 3: +52% result (lower-right inside image) ── */}
+            {/* ── Floating badge 3: results (lower-right inside image) ── */}
             <div className="absolute bottom-[14%] right-[6%] z-30">
               <div className="rounded-xl bg-blue-600 px-5 py-[14px] shadow-xl shadow-blue-600/25">
                 <p className="text-[1.6rem] font-black leading-none tracking-tight text-white">
-                  +52&nbsp;%
+                  Livraison
                 </p>
                 <p className="mt-[5px] text-[10px] font-medium text-blue-200">
-                  d&apos;appels entrants
+                  sur mesure
                 </p>
               </div>
             </div>

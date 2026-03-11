@@ -129,7 +129,7 @@ function ContactSection() {
             <div className="space-y-[14px]">
               {/* Email */}
               <a
-                href="mailto:contact@localrank.fr"
+                href="mailto:contact@sitnikovweb.fr"
                 className="group flex items-center gap-3 text-[13px] font-medium text-gray-600 transition-colors duration-150 hover:text-blue-600"
               >
                 <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-white shadow-sm ring-1 ring-gray-100/90 transition-shadow duration-150 group-hover:shadow-md">
@@ -147,12 +147,12 @@ function ContactSection() {
                     />
                   </svg>
                 </span>
-                contact@localrank.fr
+                contact@sitnikovweb.fr
               </a>
 
               {/* LinkedIn */}
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/erik-sitnikov-967227317/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3 text-[13px] font-medium text-gray-600 transition-colors duration-150 hover:text-blue-600"
@@ -171,7 +171,7 @@ function ContactSection() {
 
               {/* Malt */}
               <a
-                href="https://malt.fr"
+                href="https://www.malt.fr/profile/eriksitnikov"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3 text-[13px] font-medium text-gray-600 transition-colors duration-150 hover:text-blue-600"
@@ -196,7 +196,7 @@ function ContactSection() {
 
               {/* Telegram */}
               <a
-                href="https://t.me/localrank"
+                href="https://t.me/sitnikovweb"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3 text-[13px] font-medium text-gray-600 transition-colors duration-150 hover:text-blue-600"

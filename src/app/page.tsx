@@ -20,26 +20,19 @@ function HeroSection() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[62%]"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1920&q=80')",
+          backgroundImage: "url('/hero_bg.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           clipPath: 'polygon(10% 0, 100% 0, 100% 100%, 0 100%)',
+          WebkitClipPath: 'polygon(10% 0, 100% 0, 100% 100%, 0 100%)',
+          transform: 'translateZ(0)',
+          backfaceVisibility: 'hidden' as const,
         }}
       >
         {/* Fade to off-white on left edge */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#FDFCFA] via-[#FDFCFA]/55 to-transparent" />
         {/* Subtle vignette bottom-right */}
         <div className="absolute inset-0 bg-gradient-to-tl from-slate-900/20 via-transparent to-transparent" />
-      </div>
-
-      {/* ── Floating badge top-right (desktop) ── */}
-      <div
-        aria-hidden="true"
-        className="absolute right-[29%] top-[120px] z-20 hidden items-center gap-2 rounded-full bg-blue-600 px-4 py-2.5 shadow-xl shadow-blue-600/30 lg:flex"
-      >
-        <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-white/70" />
-        <span className="text-xs font-semibold tracking-wide text-white">Expert SEO Local · Orléans</span>
       </div>
 
       {/* ── Floating stat card bottom-right (desktop) ── */}
@@ -118,13 +111,6 @@ function HeroSection() {
         </div>
       </div>
 
-      {/* ── Scroll indicator ── */}
-      <div className="absolute bottom-8 left-14 z-10 hidden flex-col items-start gap-2 lg:flex">
-        <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-gray-300">
-          Scroll
-        </span>
-        <div className="h-10 w-px bg-gradient-to-b from-gray-300 to-transparent" />
-      </div>
     </section>
   )
 }
@@ -164,39 +150,28 @@ function AboutSection() {
         <div
           className="relative min-h-[420px] overflow-hidden lg:min-h-0"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=900&q=80')",
+            backgroundImage: "url('/main/photo_aboutsection.png')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         >
-          {/* Dark gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/85 via-gray-900/70 to-gray-800/50" />
+          {/* Very light overlay — photo stays bright, text still readable */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/20 via-gray-900/10 to-transparent" />
 
           {/* Floating top-left label */}
           <div className="absolute left-8 top-10 z-10 sm:left-12 sm:top-14 lg:left-16 lg:top-16">
             <div className="mb-5 flex items-center gap-3">
-              <span className="h-px w-8 bg-blue-400/60" />
-              <span className="text-xs font-bold uppercase tracking-[0.22em] text-blue-400">
+              <span className="h-px w-8 bg-blue-700" />
+              <span className="text-xs font-bold uppercase tracking-[0.22em] text-blue-800">
                 À propos
               </span>
             </div>
-            <p className="max-w-[260px] text-sm leading-relaxed text-white/60">
+            <p className="max-w-[260px] text-sm leading-relaxed text-blue-900">
               Spécialiste SEO local indépendant, basé à Orléans.<br />
               Je travaille directement avec vous.
             </p>
           </div>
 
-          {/* Bottom-left decorative number */}
-          <div className="absolute bottom-12 left-8 z-10 sm:left-12 lg:left-16">
-            <p
-              className="font-black leading-none text-white/[0.06] select-none"
-              style={{ fontSize: 'clamp(6rem, 12vw, 10rem)' }}
-              aria-hidden="true"
-            >
-              01
-            </p>
-          </div>
         </div>
 
         {/* RIGHT: light editorial content panel */}
@@ -554,7 +529,7 @@ function ContactSection() {
 
             {/* CTA */}
             <a
-              href="mailto:contact@localrank.fr"
+              href="mailto:contact@sitnikovweb.fr"
               className="inline-flex items-center gap-3 rounded-full bg-blue-600 px-8 py-4 text-base font-bold text-white shadow-xl shadow-blue-600/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-blue-600/35"
             >
               Demander mon audit gratuit

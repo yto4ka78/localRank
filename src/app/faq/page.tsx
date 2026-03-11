@@ -8,7 +8,7 @@ import FaqAccordion from "@/components/faq/FaqAccordion";
    METADATA
 ───────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: "FAQ — Questions fréquentes | LocalRank",
+  title: "FAQ — Questions fréquentes | Sitnikov Web",
   description:
     "Réponses aux questions les plus fréquentes sur mes services : création de sites web, SEO local, optimisation des performances, outils IA et conditions de collaboration.",
 };
@@ -19,13 +19,13 @@ export const metadata: Metadata = {
    Right side: abstract editorial cluster with stat card.
 ───────────────────────────────────────────────────────── */
 function HeroSection() {
-  const categoryPills = [
-    "Travailler ensemble",
-    "Création de sites",
-    "SEO & optimisation",
-    "Tarifs & délais",
-    "IA & automatisation",
-    "Support",
+  const categoryPills: { label: string; count: number }[] = [
+    { label: "Travailler ensemble", count: 4 },
+    { label: "Création de sites", count: 4 },
+    { label: "Optimisation & SEO", count: 2 },
+    { label: "Tarifs & délais", count: 3 },
+    { label: "IA & automatisation", count: 2 },
+    { label: "Support & révisions", count: 1 },
   ];
 
   return (
@@ -138,7 +138,7 @@ function HeroSection() {
 
                 {/* Category pills grid */}
                 <div className="flex flex-col gap-2.5">
-                  {categoryPills.map((label, i) => (
+                  {categoryPills.map(({ label, count }, i) => (
                     <div
                       key={label}
                       className="flex items-center gap-3"
@@ -159,11 +159,15 @@ function HeroSection() {
                       >
                         {label}
                       </span>
-                      {i === 0 && (
-                        <span className="ml-auto rounded-full bg-blue-50 px-2 py-[2px] text-[10px] font-bold text-blue-600">
-                          4 questions
-                        </span>
-                      )}
+                      <span
+                        className={`ml-auto rounded-full px-2 py-[2px] text-[10px] font-bold ${
+                          i === 0
+                            ? "bg-blue-50 text-blue-600"
+                            : "bg-gray-100 text-gray-500"
+                        }`}
+                      >
+                        {count} question{count !== 1 ? "s" : ""}
+                      </span>
                     </div>
                   ))}
                 </div>
