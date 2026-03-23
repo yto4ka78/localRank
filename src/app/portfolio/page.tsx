@@ -23,26 +23,24 @@ interface MosaicProject {
    DATA
 ════════════════════════════════════════════════════════ */
 const featured: Project = {
-  slug: "restaurant-belle-vue",
-  title: "Restaurant La Belle Vue",
+  slug: "gb-project-concept",
+  title: "GB Project Concept",
   description:
-    "Refonte complète de la présence locale : fiche Google Business optimisée, site mobile-first et stratégie d'avis structurée. Résultat : +63 % d'appels entrants en 3 mois.",
-  tags: ["Google Business", "Local SEO", "Site Web"],
-  result: "+63 % d'appels",
-  image:
-    "/portfolio/portfolio-hero.png",
+    "Création complète d’un site vitrine pour une entreprise spécialisée dans les travaux extérieurs de maison en Île-de-France : terrasses, allées, clôtures, terrassement et aménagement paysager. Objectif : construire une présence en ligne professionnelle, claire et performante, avec une base SEO technique solide dès le départ.",
+  tags: ["Site Vitrine", "SEO Technique", "Local SEO"],
+  result: "Site vitrine créé en 1 semaine",
+  image: "/portfolio/portfolio-of-gbprojectconcept.png",
 };
 
 const showcase: Project[] = [
   {
-    slug: "garage-dupont-auto",
-    title: "Garage Dupont Auto",
+    slug: "website-analyzer",
+    title: "Website Analyzer AI",
     description:
-      "Optimisation du profil Google Maps et création d'une landing page locale ciblée. Positionnement top 3 sur « garage orléans » obtenu en 6 semaines.",
-    tags: ["Google Maps", "SEO Technique", "Landing Page"],
-    result: "Top 3 en 6 sem.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80",
+      "Analyse de performance de site web pour les entreprises avec l'IA. Objectif : améliorer la visibilité en ligne et la conversion des clients.",
+    tags: ["SEO Technique", "AI"],
+    result: "Analyse de performance en 1 minute",
+    image: "/portfolio/portfolio-of-websiteanalyzer.webp",
   },
   {
     slug: "cabinet-dentaire-orleans",
@@ -481,7 +479,8 @@ function FeaturedSection() {
 
             {/* CTA */}
             <Link
-              href={`/portfolio/${featured.slug}`}
+              href="https://gbprojectconcept.fr"
+              target="_blank"
               className="group/btn inline-flex items-center gap-3 self-start rounded-full bg-gray-900 px-7 py-3.5 text-sm font-bold text-white shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/25"
             >
               Voir le projet
@@ -497,7 +496,7 @@ function FeaturedSection() {
               aria-hidden="true"
               className="absolute -right-5 -top-5 z-0 border-[2.5px] border-blue-100"
               style={{
-                width: "clamp(286px, 36.5vw, 498px)",
+                width: "clamp(390px, 48vw, 670px)",
                 height: "clamp(386px, 48.5vw, 658px)",
                 borderRadius: "999px 999px 36px 36px",
               }}
@@ -507,7 +506,7 @@ function FeaturedSection() {
             <div
               className="relative z-10 overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.13)]"
               style={{
-                width: "clamp(300px, 38vw, 520px)",
+                width: "clamp(410px, 50vw, 700px)",
                 height: "clamp(400px, 50vw, 680px)",
                 borderRadius: "999px 999px 40px 40px",
               }}
@@ -516,6 +515,7 @@ function FeaturedSection() {
                 src={featured.image}
                 alt={featured.title}
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                style={{ objectPosition: "top left" }}
               />
               {/* Bottom vignette */}
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-900/40" />
@@ -554,7 +554,7 @@ function FeaturedSection() {
               <div className="flex items-center gap-1.5 rounded-full bg-blue-600/10 px-3 py-[6px] ring-1 ring-blue-200/60">
                 <span className="h-[6px] w-[6px] flex-shrink-0 rounded-full bg-blue-600" />
                 <span className="text-[10px] font-bold text-blue-700">
-                  Orléans
+                  Caen
                 </span>
               </div>
             </div>
@@ -617,7 +617,8 @@ function ShowcaseSection() {
               {p1.description}
             </p>
             <Link
-              href={`/portfolio/${p1.slug}`}
+              href="https://websiteanalyzer.fr/"
+              target="_blank"
               className="group inline-flex items-center gap-2 self-start text-sm font-semibold text-blue-600 transition-all hover:gap-3"
             >
               Voir le projet
