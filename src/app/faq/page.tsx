@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "FAQ — Questions fréquentes | Sitnikov Web",
   description:
     "Réponses aux questions les plus fréquentes sur mes services : création de sites web, SEO local, optimisation des performances, outils IA et conditions de collaboration.",
+  alternates: { canonical: "https://sitnikovweb.fr/faq" },
 };
 
 /* ─────────────────────────────────────────────────────────
@@ -405,9 +406,60 @@ function CtaSection() {
 /* ─────────────────────────────────────────────────────────
    PAGE ROOT
 ───────────────────────────────────────────────────────── */
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Avec quel type d'entreprises travaillez-vous ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Je travaille principalement avec des TPE et PME — artisans, restaurateurs, professions libérales, commerces locaux — qui veulent développer leur présence en ligne sérieusement.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Combien coûte un site web ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Un site vitrine sur mesure démarre généralement à partir de 290 €. Je travaille avec un devis précis et un prix fixe — pas de facturation à l'heure, pas de surprises en cours de route.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Combien de temps dure un projet en général ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Pour un site vitrine, comptez entre 2 et 4 semaines selon la complexité. Les missions d'optimisation SEO sont souvent réalisées en 1 à 2 semaines.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Proposez-vous du SEO technique ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Oui. Le SEO technique fait partie intégrante de mon travail : structure des URL, balisage sémantique HTML, Core Web Vitals, sitemap XML, données structurées Schema.org, optimisation des images.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Pouvez-vous intégrer l'IA dans un site ou un processus métier ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Oui. Je conçois des intégrations pratiques basées sur l'IA : chatbots, génération automatique de contenus ciblés, réponses clients intelligentes.",
+      },
+    },
+  ],
+};
+
 export default function FaqPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <main className="overflow-x-hidden bg-[#FDFCFA]">
         <HeroSection />
         <FaqBodySection />

@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { services } from "@/data/services";
+
+export const metadata: Metadata = {
+  title: "SEO Local & Google Maps Orléans — Sitnikov Web",
+  description:
+    "Spécialiste SEO local indépendant à Orléans. Optimisation Google Business Profile, référencement local et création de sites vitrine pour TPE/PME. Plus d'appels, plus de clients.",
+  alternates: { canonical: "https://sitnikovweb.fr" },
+};
 
 /* ═══════════════════════════════════════════════════════
    SECTION 1 — HERO
@@ -130,8 +138,9 @@ function HeroSection() {
                 </span>
               </div>
 
-              {/* Headline */}
-              <h1
+              {/* Headline (aria-hidden: canonical H1 is in the desktop layout) */}
+              <p
+                aria-hidden="true"
                 className="mb-4 font-black leading-[1.04] tracking-tight text-white"
                 style={{ fontSize: "clamp(1.85rem, 9vw, 2.4rem)" }}
               >
@@ -144,7 +153,7 @@ function HeroSection() {
                   <br />
                   entreprise.
                 </span>
-              </h1>
+              </p>
 
               {/* Body */}
               <p className="mb-1 text-[0.93rem] leading-relaxed text-white/65">
@@ -159,7 +168,7 @@ function HeroSection() {
             {/* BOTTOM — CTA + micro trust line */}
             <div className="mt-10">
               <a
-                href="#contact"
+                href="/contact"
                 className="flex w-full items-center justify-center gap-2 rounded-full bg-blue-600 py-4 text-sm font-bold text-white shadow-xl shadow-blue-600/30 active:bg-blue-700"
               >
                 Demander un audit
@@ -331,14 +340,14 @@ function HeroSection() {
 
             <div className="mb-10 flex flex-wrap items-center gap-4">
               <a
-                href="#contact"
+                href="/contact"
                 className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-blue-600/25 transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/35"
               >
                 Demander un audit
                 <span className="font-normal text-blue-200">(10 min)</span>
               </a>
               <a
-                href="#about"
+                href="/services"
                 className="group inline-flex items-center gap-2.5 text-sm font-semibold text-gray-700 transition-colors hover:text-blue-600"
               >
                 Voir les offres
@@ -897,7 +906,7 @@ function ContactSection() {
 
             {/* CTA */}
             <a
-              href="mailto:contact@sitnikovweb.fr"
+              href="/contact"
               className="flex w-full items-center justify-center gap-3 rounded-full bg-blue-600 px-8 py-4 text-base font-bold text-white shadow-xl shadow-blue-600/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-blue-600/35 sm:inline-flex sm:w-auto"
             >
               Demander mon audit gratuit
@@ -1174,9 +1183,38 @@ function ServicesSection() {
 /* ═══════════════════════════════════════════════════════
    PAGE ROOT
 ════════════════════════════════════════════════════════ */
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Sitnikov Web",
+  description:
+    "Spécialiste SEO local indépendant à Orléans. Optimisation Google Business Profile, référencement local et création de sites vitrine pour TPE/PME.",
+  url: "https://sitnikovweb.fr",
+  telephone: "+33-XX-XX-XX-XX",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Orléans",
+    addressRegion: "Centre-Val de Loire",
+    postalCode: "45000",
+    addressCountry: "FR",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 47.9029,
+    longitude: 1.9039,
+  },
+  areaServed: { "@type": "City", name: "Orléans" },
+  priceRange: "€€",
+  sameAs: [],
+};
+
 export default function HomePage() {
   return (
     <main className="overflow-x-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+      />
       <HeroSection />
       <AboutSection />
       <DiagnosticSection />

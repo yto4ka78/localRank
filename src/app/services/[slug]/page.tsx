@@ -20,6 +20,7 @@ export async function generateMetadata({
   return {
     title: service.seo.title,
     description: service.seo.description,
+    alternates: { canonical: `https://sitnikovweb.fr/services/${slug}` },
   };
 }
 
@@ -54,8 +55,34 @@ export default async function ServicePage({
   /* Related services (3 others) */
   const related = services.filter((s) => s.slug !== slug).slice(0, 3);
 
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.title,
+    description: service.shortDescription,
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Sitnikov Web",
+      url: "https://sitnikovweb.fr",
+    },
+    areaServed: { "@type": "City", name: "Orléans" },
+    url: `https://sitnikovweb.fr/services/${slug}`,
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Accueil", item: "https://sitnikovweb.fr" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://sitnikovweb.fr/services" },
+      { "@type": "ListItem", position: 3, name: service.title, item: `https://sitnikovweb.fr/services/${slug}` },
+    ],
+  };
+
   return (
     <main className="overflow-x-hidden">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       {/* ══════════════════════════════════════════════════════════════════
           HERO — service title, tagline, icon

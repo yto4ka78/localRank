@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Services SEO Local Orléans — Sitnikov Web",
   description:
     "Découvrez tous les services SEO local pour TPE/PME à Orléans : Google Business Profile, référencement local, optimisation site web, gestion des avis.",
+  alternates: { canonical: "https://sitnikovweb.fr/services" },
 };
 
 /* ── Service icon ─────────────────────────────────────────────────────────── */

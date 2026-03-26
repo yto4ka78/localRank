@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Portfolio — Projets SEO Local & Sites Web | Sitnikov Web",
+  description:
+    "Découvrez les réalisations de Sitnikov Web : sites vitrines, optimisations SEO local et Google Business Profile pour TPE/PME à Orléans.",
+  alternates: { canonical: "https://sitnikovweb.fr/portfolio" },
+};
 
 /* ═══════════════════════════════════════════════════════
    TYPES
