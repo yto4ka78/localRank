@@ -160,30 +160,6 @@ export default async function ServicePage({
               </div>
             </div>
 
-            {/* Right: floating stat card */}
-            <div className="hidden lg:block">
-              <div className="rounded-2xl bg-white px-8 py-7 shadow-2xl shadow-black/[0.06] ring-1 ring-gray-100">
-                <p className="mb-1 text-[11px] font-bold uppercase tracking-[0.22em] text-gray-400">
-                  Inclus
-                </p>
-                <p className="text-3xl font-black leading-none tracking-tight text-gray-900">
-                  {service.features.length}
-                </p>
-                <p className="mt-1 text-xs font-medium text-gray-400">
-                  livrables inclus
-                </p>
-                <div className="my-4 h-px bg-gray-100" />
-                <p className="mb-1 text-[11px] font-bold uppercase tracking-[0.22em] text-gray-400">
-                  Bénéfices
-                </p>
-                <p className="text-3xl font-black leading-none tracking-tight text-blue-600">
-                  {service.benefits.length}
-                </p>
-                <p className="mt-1 text-xs font-medium text-gray-400">
-                  résultats mesurables
-                </p>
-              </div>
-            </div>
 
           </div>
         </div>

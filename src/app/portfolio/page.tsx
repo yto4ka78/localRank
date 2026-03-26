@@ -43,62 +43,60 @@ const showcase: Project[] = [
     image: "/portfolio/portfolio-of-websiteanalyzer.webp",
   },
   {
-    slug: "cabinet-dentaire-orleans",
-    title: "Cabinet Dentaire Orléans",
+    slug: "french-pizza",
+    title: "French Pizza",
     description:
-      "Audit complet, refonte des pages services avec intent local et stratégie d'acquisition d'avis Google. +40 % de nouveaux patients en 2 mois.",
-    tags: ["SEO Local", "Avis Google", "Pages Services"],
-    result: "+40 % de patients",
-    image:
-      "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1400&q=80",
+      "Refonte complète du site vitrine d'une pizzeria locale : nouvelle identité visuelle, menu en ligne, optimisation mobile et SEO local. Site reconstruit de zéro pour maximiser les commandes et la visibilité sur Google.",
+    tags: ["Site Vitrine", "SEO Local", "Mobile"],
+    result: "Site refait de zéro",
+    image: "/portfolio/frenchpizza-portfolio.png",
   },
   {
-    slug: "artisan-plombier-centre-val",
-    title: "Artisan Plombier Centre-Val",
+    slug: "bolderiz",
+    title: "Bolderiz",
     description:
-      "De zéro présence locale au top 3 du Local Pack en 8 semaines. Site responsive créé from scratch avec CTA d'appel immédiatement visible.",
-    tags: ["Google Business", "Site Vitrine", "Mobile SEO"],
-    result: "Top 3 en 8 sem.",
-    image:
-      "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?auto=format&fit=crop&w=1400&q=80",
+      "Création complète du site vitrine de zéro : design sur-mesure, structure pensée pour la conversion et optimisation mobile. Un site pensé pour transformer les visiteurs en clients dès le premier clic.",
+    tags: ["Site Vitrine", "Design", "Mobile SEO"],
+    result: "Site créé de zéro",
+    image: "/portfolio/bolderiz.webp",
   },
 ];
 
 const mosaic: MosaicProject[] = [
   {
-    slug: "salon-beaute-loiret",
-    title: "Salon Beauté Loiret",
-    category: "Local SEO",
+    slug: "google-business-profile",
+    title: "Google Business Profile",
+    category: "Visibilité locale Google Maps",
     image:
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
   },
   {
-    slug: "boulangerie-du-centre",
-    title: "Boulangerie du Centre",
-    category: "Google Business",
+    slug: "seo-local",
+    title: "SEO Local",
+    category: "Référencement naturel local",
     image:
-      "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=800&q=80",
   },
   {
-    slug: "pharmacie-saint-marceau",
-    title: "Pharmacie Saint-Marceau",
-    category: "Site Web + SEO",
+    slug: "optimisation-site-web",
+    title: "Optimisation Site Web",
+    category: "Performance & conversion mobile",
     image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80",
   },
   {
-    slug: "electricien-loiret",
-    title: "Électricien Loiret",
-    category: "Local Pack",
+    slug: "gestion-reputation",
+    title: "E-Réputation & Avis",
+    category: "Avis Google & confiance client",
     image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
   },
   {
-    slug: "restaurant-le-vieux-orleans",
-    title: "Le Vieux Orléans",
-    category: "Google Maps + Site",
+    slug: "optimisation-ia",
+    title: "Optimisation IA",
+    category: "Intelligence artificielle & automatisation",
     image:
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
@@ -413,15 +411,6 @@ function FeaturedSection() {
       id="featured"
       className="relative overflow-hidden bg-[#F8F7F5] py-24 lg:py-36"
     >
-      {/* ── BG: ghost ordinal "01" ── */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -left-4 bottom-0 select-none font-black leading-none text-gray-900/[0.032]"
-        style={{ fontSize: "clamp(12rem, 26vw, 24rem)" }}
-      >
-        01
-      </div>
-
       {/* ── BG: ambient glow — upper right ── */}
       <div
         aria-hidden="true"
@@ -479,7 +468,7 @@ function FeaturedSection() {
 
             {/* CTA */}
             <Link
-              href="https://gbprojectconcept.fr"
+              href="https://gbprojetconcept.fr"
               target="_blank"
               className="group/btn inline-flex items-center gap-3 self-start rounded-full bg-gray-900 px-7 py-3.5 text-sm font-bold text-white shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/25"
             >
@@ -655,7 +644,8 @@ function ShowcaseSection() {
               {p2.description}
             </p>
             <Link
-              href={`/portfolio/${p2.slug}`}
+              href="https://frenchpizza.fly.dev/"
+              target="_blank"
               className="group inline-flex items-center gap-2 self-start text-sm font-semibold text-blue-600 transition-all hover:gap-3"
             >
               Voir le projet
@@ -721,7 +711,7 @@ function ShowcaseSection() {
                       {p3.result}
                     </p>
                     <p className="mt-0.5 text-xs text-gray-500">
-                      en 8 semaines
+                      en 1 semaine
                     </p>
                   </div>
                 </div>
@@ -730,7 +720,13 @@ function ShowcaseSection() {
 
             {/* ── Floating card — overlaps bottom-left of image ── */}
             <div className="relative z-10 mt-8 lg:absolute lg:-bottom-10 lg:left-0 lg:mt-0 lg:w-[420px]">
-              <div className="rounded-2xl bg-white p-7 shadow-[0_16px_56px_rgba(0,0,0,0.09)] ring-1 ring-gray-100/80">
+              {/* decorative card behind */}
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 rounded-2xl bg-blue-50 ring-1 ring-blue-100/60"
+                style={{ transform: "rotate(-2.5deg) translateY(6px)", zIndex: -1 }}
+              />
+              <div className="rounded-2xl bg-white p-7 shadow-[0_16px_56px_rgba(0,0,0,0.09)] ring-1 ring-gray-100/80" style={{ transform: "rotate(-0.6deg)" }}>
                 <h3
                   className="mb-3 font-black leading-tight tracking-tight text-gray-900"
                   style={{ fontSize: "clamp(1.4rem, 2.5vw, 2rem)" }}
@@ -784,20 +780,20 @@ function MosaicSection() {
             <div className="mb-5 flex items-center gap-3">
               <span className="h-px w-10 bg-blue-600" />
               <span className="text-xs font-bold uppercase tracking-[0.26em] text-blue-600">
-                Réalisations
+                Compétences
               </span>
             </div>
             <h2
               className="font-black tracking-tight text-gray-900"
               style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)" }}
             >
-              Autres projets
+              Ce que je maîtrise
             </h2>
           </div>
           <p className="max-w-xs text-sm leading-relaxed text-gray-500 lg:text-right">
-            Chaque entreprise est différente.
+            Chaque levier est choisi
             <br />
-            Chaque solution est sur mesure.
+            pour un impact concret et mesurable.
           </p>
         </div>
 
@@ -806,7 +802,7 @@ function MosaicSection() {
           {mosaic.map((p) => (
             <Link
               key={p.slug}
-              href={`/portfolio/${p.slug}`}
+              href={`/services/${p.slug}`}
               className="group relative block h-[200px] overflow-hidden rounded-2xl"
             >
               <img
@@ -824,9 +820,9 @@ function MosaicSection() {
         <div className="hidden lg:grid lg:grid-cols-12 lg:gap-4 [grid-template-rows:290px_290px]">
           {/* Item 1 — cols 1–5, row 1 */}
           <Link
-            href={`/portfolio/${mosaic[0].slug}`}
+            href={`/services/${mosaic[0].slug}`}
             className="group relative col-span-5 row-span-1 block overflow-hidden"
-            style={{ borderRadius: "20px 20px 60px 20px" }}
+            style={{ clipPath: "polygon(0 0, 97% 0, 100% 100%, 3% 100%)" }}
           >
             <img
               src={mosaic[0].image}
@@ -839,8 +835,9 @@ function MosaicSection() {
 
           {/* Item 2 — cols 6–9, row 1 */}
           <Link
-            href={`/portfolio/${mosaic[1].slug}`}
-            className="group relative col-span-4 row-span-1 block overflow-hidden rounded-2xl"
+            href={`/services/${mosaic[1].slug}`}
+            className="group relative col-span-4 row-span-1 block overflow-hidden"
+            style={{ clipPath: "polygon(3% 0, 100% 0, 97% 100%, 0 100%)" }}
           >
             <img
               src={mosaic[1].image}
@@ -853,7 +850,7 @@ function MosaicSection() {
 
           {/* Item 3 — cols 10–12, rows 1–2 (portrait) */}
           <Link
-            href={`/portfolio/${mosaic[2].slug}`}
+            href={`/services/${mosaic[2].slug}`}
             className="group relative col-span-3 row-span-2 block overflow-hidden"
             style={{ clipPath: "polygon(0 2%, 100% 0, 100% 98%, 0 100%)" }}
           >
@@ -868,9 +865,9 @@ function MosaicSection() {
 
           {/* Item 4 — cols 1–3, row 2 */}
           <Link
-            href={`/portfolio/${mosaic[3].slug}`}
+            href={`/services/${mosaic[3].slug}`}
             className="group relative col-span-3 row-span-1 block overflow-hidden"
-            style={{ borderRadius: "20px 60px 20px 20px" }}
+            style={{ clipPath: "polygon(0 0, 100% 3%, 100% 97%, 0 100%)" }}
           >
             <img
               src={mosaic[3].image}
@@ -883,7 +880,7 @@ function MosaicSection() {
 
           {/* Item 5 — cols 4–9, row 2 */}
           <Link
-            href={`/portfolio/${mosaic[4].slug}`}
+            href={`/services/${mosaic[4].slug}`}
             className="group relative col-span-6 row-span-1 block overflow-hidden"
             style={{ clipPath: "polygon(0 0, 100% 0, 97% 100%, 0 92%)" }}
           >

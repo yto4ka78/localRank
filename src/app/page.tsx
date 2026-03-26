@@ -96,7 +96,6 @@ function HeroSection() {
       ════════════════════════════════════════ */}
       <div className="lg:hidden">
         <div className="relative flex min-h-[100svh] flex-col">
-
           {/* ── Background image (absolute, full cover) ── */}
           <div className="absolute inset-0 overflow-hidden">
             <img
@@ -121,10 +120,8 @@ function HeroSection() {
           {/* ── Content layer ── */}
           {/* pt-20 = 80px → clears fixed navbar (h-16 = 64px) + 16px breathing room */}
           <div className="relative z-10 flex flex-1 flex-col justify-between px-5 pb-10 pt-20">
-
             {/* TOP — label + headline + subtext */}
             <div className="mt-4">
-
               {/* Label */}
               <div className="mb-5 flex items-center gap-2.5">
                 <span className="h-px w-8 bg-blue-400" />
@@ -134,8 +131,10 @@ function HeroSection() {
               </div>
 
               {/* Headline */}
-              <h1 className="mb-4 font-black leading-[1.04] tracking-tight text-white"
-                  style={{ fontSize: "clamp(1.85rem, 9vw, 2.4rem)" }}>
+              <h1
+                className="mb-4 font-black leading-[1.04] tracking-tight text-white"
+                style={{ fontSize: "clamp(1.85rem, 9vw, 2.4rem)" }}
+              >
                 Plus d&apos;appels
                 <br />
                 et de demandes
@@ -182,11 +181,11 @@ function HeroSection() {
 
               {/* Micro trust */}
               <p className="mt-3 text-center text-[11px] text-white/45">
-                Réponse sous 24h&nbsp;·&nbsp;Diagnostic gratuit&nbsp;·&nbsp;Sans engagement
+                Réponse sous 24h&nbsp;·&nbsp;Diagnostic gratuit&nbsp;·&nbsp;Sans
+                engagement
               </p>
             </div>
           </div>
-
         </div>
       </div>
 
@@ -270,7 +269,7 @@ function HeroSection() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-y-0 right-0 w-[62%]"
           style={{
-            backgroundImage: "url('/hero_bg.png')",
+            backgroundImage: "url('/hero_bg.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             clipPath: "polygon(10% 0, 100% 0, 100% 100%, 0 100%)",
@@ -430,10 +429,7 @@ function AboutSection() {
 
   return (
     /* Extra bottom padding creates room for the overlapping strip */
-    <section
-      id="about"
-      className="relative w-full overflow-visible pb-28 lg:pb-36"
-    >
+    <section id="about" className="relative w-full overflow-visible">
       {/* ── Full-bleed two-panel grid (intentionally no max-width) ── */}
       <div className="grid min-h-[600px] lg:min-h-[680px] lg:grid-cols-[44%_56%]">
         {/* LEFT: dark textured image panel */}
@@ -450,17 +446,19 @@ function AboutSection() {
 
           {/* Floating top-left label */}
           <div className="absolute left-8 top-10 z-10 sm:left-12 sm:top-14 lg:left-16 lg:top-16">
-            <div className="mb-5 flex items-center gap-3">
-              <span className="h-px w-8 bg-blue-700" />
-              <span className="text-xs font-bold uppercase tracking-[0.22em] text-blue-800">
-                À propos
-              </span>
+            <div className="rounded-xl bg-white/80 px-5 py-4 shadow-sm backdrop-blur-sm ring-1 ring-white/60">
+              <div className="mb-3 flex items-center gap-3">
+                <span className="h-px w-8 bg-blue-600" />
+                <span className="text-xs font-bold uppercase tracking-[0.22em] text-blue-600">
+                  À propos
+                </span>
+              </div>
+              <p className="max-w-[220px] text-sm leading-relaxed text-gray-700">
+                Spécialiste SEO local indépendant, basé à Orléans.
+                <br />
+                Je travaille directement avec vous.
+              </p>
             </div>
-            <p className="max-w-[260px] text-sm leading-relaxed text-blue-900">
-              Spécialiste SEO local indépendant, basé à Orléans.
-              <br />
-              Je travaille directement avec vous.
-            </p>
           </div>
         </div>
 
@@ -1013,7 +1011,6 @@ function ServicesSection() {
       />
 
       <div className="relative z-10 mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
-
         {/* ── Header ── */}
         <div className="mb-14 grid items-end gap-6 lg:mb-16 lg:grid-cols-[1fr_auto]">
           <div>
@@ -1169,7 +1166,6 @@ function ServicesSection() {
             </svg>
           </Link>
         </div>
-
       </div>
     </section>
   );
