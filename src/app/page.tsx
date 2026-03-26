@@ -1190,7 +1190,8 @@ const localBusinessJsonLd = {
   description:
     "Spécialiste SEO local indépendant à Orléans. Optimisation Google Business Profile, référencement local et création de sites vitrine pour TPE/PME.",
   url: "https://sitnikovweb.fr",
-  telephone: "+33-XX-XX-XX-XX",
+  telephone: "+33780335490",
+  email: "contact@eriksitnikov.fr",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Orléans",
