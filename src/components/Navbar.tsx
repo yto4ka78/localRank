@@ -13,10 +13,10 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close mobile menu when scrolling away
+  // Close mobile menu when user scrolls back to top
   useEffect(() => {
-    if (mobileOpen && !scrolled) setMobileOpen(false);
-  }, [scrolled, mobileOpen]);
+    if (!scrolled) setMobileOpen(false);
+  }, [scrolled]);
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
