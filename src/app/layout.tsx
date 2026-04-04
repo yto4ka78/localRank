@@ -58,6 +58,14 @@ export default function RootLayout({
       <head>
         <link rel="alternate" hrefLang="fr-FR" href={BASE_URL} />
         <link rel="alternate" hrefLang="x-default" href={BASE_URL} />
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LTCDWZ15YB" />
+        <script dangerouslySetInnerHTML={{ __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LTCDWZ15YB');
+        `}} />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
