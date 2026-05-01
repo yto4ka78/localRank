@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "FAQ — Questions fréquentes | Sitnikov Web",
   description:
     "Réponses aux questions les plus fréquentes sur mes services : création de sites web, SEO local, optimisation des performances, outils IA et conditions de collaboration.",
-  alternates: { canonical: "https://sitnikovweb.fr/faq" },
+  alternates: { canonical: "https://eriksitnikov.fr/faq" },
 };
 
 /* ─────────────────────────────────────────────────────────

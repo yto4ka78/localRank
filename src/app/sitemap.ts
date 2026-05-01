@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllServiceSlugs } from "@/data/services";
 
-const BASE = "https://sitnikovweb.fr";
+const BASE = "https://eriksitnikov.fr";
 
 const citySlugs = [
   "orleans",

@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const BASE_URL = "https://sitnikovweb.fr";
+const BASE_URL = "https://eriksitnikov.fr";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

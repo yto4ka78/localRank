@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "SEO Local & Google Maps Orléans — Sitnikov Web",
   description:
     "Spécialiste SEO local indépendant à Orléans. Optimisation Google Business Profile, référencement local et création de sites vitrine pour TPE/PME. Plus d'appels, plus de clients.",
-  alternates: { canonical: "https://sitnikovweb.fr" },
+  alternates: { canonical: "https://eriksitnikov.fr" },
 };
 
 /* ═══════════════════════════════════════════════════════
@@ -1189,7 +1189,7 @@ const localBusinessJsonLd = {
   name: "Sitnikov Web",
   description:
     "Spécialiste SEO local indépendant à Orléans. Optimisation Google Business Profile, référencement local et création de sites vitrine pour TPE/PME.",
-  url: "https://sitnikovweb.fr",
+  url: "https://eriksitnikov.fr",
   telephone: "+33780335490",
   email: "contact@eriksitnikov.fr",
   address: {

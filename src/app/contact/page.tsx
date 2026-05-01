@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Contact — Audit SEO Gratuit | Sitnikov Web",
   description:
     "Demandez un audit SEO local gratuit. Analyse de votre fiche Google + site en 10 min. Réponse sous 24h, sans engagement.",
-  alternates: { canonical: "https://sitnikovweb.fr/contact" },
+  alternates: { canonical: "https://eriksitnikov.fr/contact" },
 };
 
 /* ═══════════════════════════════════════════════════════

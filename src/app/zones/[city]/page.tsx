@@ -76,7 +76,7 @@ export async function generateMetadata({
   return {
     title: `SEO Local ${data.name} — Sitnikov Web`,
     description: data.description,
-    alternates: { canonical: `https://sitnikovweb.fr/zones/${city}` },
+    alternates: { canonical: `https://eriksitnikov.fr/zones/${city}` },
   };
 }
 
@@ -94,7 +94,7 @@ export default async function ZonePage({
     "@type": "LocalBusiness",
     name: "Sitnikov Web",
     description: data.description,
-    url: `https://sitnikovweb.fr/zones/${city}`,
+    url: `https://eriksitnikov.fr/zones/${city}`,
     areaServed: {
       "@type": "City",
       name: data.name,

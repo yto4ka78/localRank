@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Zones d'intervention SEO Local — Orléans & alentours | Sitnikov Web",
   description:
     "Sitnikov Web intervient à Orléans et dans toutes les communes du Loiret : Saran, Olivet, Fleury-les-Aubrais, Saint-Jean-de-Braye et plus. SEO local et Google Maps.",
-  alternates: { canonical: "https://sitnikovweb.fr/zones" },
+  alternates: { canonical: "https://eriksitnikov.fr/zones" },
 };
 
 const cities = [
