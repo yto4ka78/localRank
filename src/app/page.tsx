@@ -667,7 +667,7 @@ function DiagnosticSection() {
     /* pt-40/52 accommodates the About section's overlapping metadata strip */
     <section
       id="diagnostic"
-      className="relative overflow-hidden bg-[#F8F7F5] pb-24 pt-40 lg:pb-36 lg:pt-52"
+      className="relative overflow-hidden bg-[#F8F7F5] pb-16 pt-24 lg:pb-24 lg:pt-32"
     >
       {/* Ambient glow */}
       <div
@@ -1004,7 +1004,7 @@ function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative overflow-hidden bg-white py-24 lg:py-36"
+      className="relative overflow-hidden bg-white py-16 lg:py-24"
     >
       {/* Ambient glow — top right */}
       <div
