@@ -188,8 +188,7 @@ function HeroSection() {
       {/* ── BG 1: large angled polygon shape — right side ── */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute right-0 top-0 h-full w-[54%] bg-blue-50/55"
-        style={{ clipPath: "polygon(20% 0%, 100% 0%, 100% 100%, 0% 82%)" }}
+        className="pointer-events-none absolute right-0 top-0 h-full w-full bg-blue-50/55 [clip-path:none] lg:w-[54%] lg:[clip-path:polygon(20%_0%,100%_0%,100%_100%,0%_82%)]"
       />
 
       {/* ── BG 2: soft ambient glow — left ── */}
@@ -238,7 +237,7 @@ function HeroSection() {
             <h1 className="tracking-tight text-gray-900">
               <span
                 className="block font-black leading-[0.86]"
-                style={{ fontSize: "clamp(4.6rem, 10.5vw, 9rem)" }}
+                style={{ fontSize: "clamp(3rem, 14vw, 9rem)" }}
               >
                 Port
               </span>
@@ -246,7 +245,7 @@ function HeroSection() {
               <span
                 className="block font-black leading-[0.86] text-blue-600"
                 style={{
-                  fontSize: "clamp(3.8rem, 8.8vw, 7.6rem)",
+                  fontSize: "clamp(2.6rem, 12vw, 7.6rem)",
                   paddingLeft: "clamp(0.5rem, 2vw, 2rem)",
                 }}
               >
@@ -267,16 +266,16 @@ function HeroSection() {
             </div>
 
             {/* Stats — 3-col grid with animated hover accents */}
-            <div className="mt-12 grid grid-cols-3 border-t border-gray-100/90 pt-8">
+            <div className="mt-12 grid grid-cols-1 gap-5 border-t border-gray-100/90 pt-8 sm:grid-cols-3 sm:gap-0">
               {stats.map((s, i) => (
                 <div
                   key={s.value}
                   className={`group cursor-default ${
                     i === 0
-                      ? "pr-4 lg:pr-6"
+                      ? "sm:pr-4 lg:pr-6"
                       : i === 1
-                        ? "border-x border-gray-100/90 px-4 lg:px-6"
-                        : "pl-4 lg:pl-6"
+                        ? "sm:border-x sm:border-gray-100/90 sm:px-4 lg:px-6"
+                        : "sm:pl-4 lg:pl-6"
                   }`}
                 >
                   <p className="text-[1.85rem] font-black leading-none tracking-tight text-gray-900 transition-colors duration-200 group-hover:text-blue-600 lg:text-[2.2rem]">
@@ -491,10 +490,10 @@ function FeaturedSection() {
             {/* ── Decorative offset ring — sits behind the arch ── */}
             <div
               aria-hidden="true"
-              className="absolute -right-5 -top-5 z-0 border-[2.5px] border-blue-100"
+              className="absolute -right-2 -top-2 z-0 border-[2px] border-blue-100 lg:-right-5 lg:-top-5 lg:border-[2.5px]"
               style={{
-                width: "clamp(390px, 48vw, 670px)",
-                height: "clamp(386px, 48.5vw, 658px)",
+                width: "clamp(280px, 92vw, 670px)",
+                height: "clamp(320px, 96vw, 658px)",
                 borderRadius: "999px 999px 36px 36px",
               }}
             />
@@ -503,8 +502,8 @@ function FeaturedSection() {
             <div
               className="relative z-10 overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.13)]"
               style={{
-                width: "clamp(410px, 50vw, 700px)",
-                height: "clamp(400px, 50vw, 680px)",
+                width: "clamp(290px, 94vw, 700px)",
+                height: "clamp(360px, 100vw, 680px)",
                 borderRadius: "999px 999px 40px 40px",
               }}
             >
@@ -532,15 +531,15 @@ function FeaturedSection() {
 
             {/* ── Floating metric badge — bleeds left of arch ── */}
             {/* group-hover lifts badge simultaneously with image zoom */}
-            <div className="absolute bottom-14 -left-10 z-20 transition-transform duration-500 group-hover:-translate-y-2 lg:-left-14">
-              <div className="rounded-2xl bg-white px-5 py-4 shadow-[0_8px_36px_rgba(0,0,0,0.10)] ring-1 ring-gray-100/90">
-                <p className="text-[1.65rem] font-black leading-none tracking-tight text-gray-900">
+            <div className="absolute -bottom-5 left-1/2 z-20 w-[88%] max-w-[260px] -translate-x-1/2 transition-transform duration-500 group-hover:-translate-y-2 sm:bottom-10 sm:left-6 sm:w-auto sm:max-w-none sm:translate-x-0 lg:bottom-14 lg:-left-14">
+              <div className="rounded-2xl bg-white px-4 py-3 shadow-[0_8px_36px_rgba(0,0,0,0.10)] ring-1 ring-gray-100/90 sm:px-5 sm:py-4">
+                <p className="text-[1.35rem] font-black leading-none tracking-tight text-gray-900 sm:text-[1.65rem]">
                   +63&nbsp;%
                 </p>
-                <p className="mt-1.5 text-[11px] text-gray-400">
+                <p className="mt-1 text-[10px] text-gray-400 sm:mt-1.5 sm:text-[11px]">
                   d&apos;appels entrants
                 </p>
-                <p className="mt-0.5 text-[11px] font-bold text-blue-600">
+                <p className="mt-0.5 text-[10px] font-bold text-blue-600 sm:text-[11px]">
                   en 3 mois
                 </p>
               </div>
@@ -578,10 +577,7 @@ function ShowcaseSection() {
       <section className="relative w-full bg-white">
         <div className="grid min-h-[500px] lg:grid-cols-[58%_42%]">
           {/* Image left — parallelogram clip */}
-          <div
-            className="group relative min-h-[340px] overflow-hidden"
-            style={{ clipPath: "polygon(0 0, 100% 0, 93% 100%, 0 100%)" }}
-          >
+          <div className="group relative min-h-[340px] overflow-hidden [clip-path:none] lg:[clip-path:polygon(0_0,100%_0,93%_100%,0_100%)]">
             <img
               src={p1.image}
               alt={p1.title}
@@ -662,10 +658,7 @@ function ShowcaseSection() {
           </div>
 
           {/* Image right — reverse parallelogram clip */}
-          <div
-            className="group relative min-h-[340px] overflow-hidden"
-            style={{ clipPath: "polygon(7% 0, 100% 0, 100% 100%, 0 100%)" }}
-          >
+          <div className="group relative min-h-[340px] overflow-hidden [clip-path:none] lg:[clip-path:polygon(7%_0,100%_0,100%_100%,0_100%)]">
             <img
               src={p2.image}
               alt={p2.title}
@@ -700,10 +693,7 @@ function ShowcaseSection() {
 
           <div className="relative">
             {/* Large image — shifted right via margin-left auto */}
-            <div
-              className="group relative ml-auto w-full overflow-hidden lg:w-[78%]"
-              style={{ clipPath: "polygon(0 3%, 100% 0, 100% 97%, 1.5% 100%)" }}
-            >
+            <div className="group relative ml-auto w-full overflow-hidden rounded-2xl [clip-path:none] lg:w-[78%] lg:rounded-none lg:[clip-path:polygon(0_3%,100%_0,100%_97%,1.5%_100%)]">
               <img
                 src={p3.image}
                 alt={p3.title}
