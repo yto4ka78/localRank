@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { BASE_URL, baseMeta } from "@/config/seo";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,39 +15,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const BASE_URL = "https://eriksitnikov.fr";
-
-export const metadata: Metadata = {
-  metadataBase: new URL(BASE_URL),
-  title: {
-    default: "Sitnikov Web — SEO Local & Google Maps Orléans",
-    template: "%s | Sitnikov Web",
-  },
-  description:
-    "Spécialiste SEO local indépendant à Orléans. Optimisation Google Business Profile, référencement local et création de sites vitrine pour TPE/PME. Plus d'appels, plus de clients.",
-  alternates: {
-    canonical: BASE_URL,
-    languages: { "fr-FR": BASE_URL },
-  },
-  openGraph: {
-    type: "website",
-    locale: "fr_FR",
-    url: BASE_URL,
-    siteName: "Sitnikov Web",
-    title: "Sitnikov Web — SEO Local & Google Maps Orléans",
-    description:
-      "Spécialiste SEO local indépendant à Orléans. Optimisation Google Business Profile, référencement local et création de sites vitrine pour TPE/PME.",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Sitnikov Web" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Sitnikov Web — SEO Local & Google Maps Orléans",
-    description:
-      "Spécialiste SEO local indépendant à Orléans. Plus d'appels, plus de clients.",
-    images: ["/og-image.jpg"],
-  },
-  robots: { index: true, follow: true },
-};
+export const metadata: Metadata = baseMeta;
 
 export default function RootLayout({
   children,

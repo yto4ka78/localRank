@@ -230,7 +230,59 @@ export const services: Service[] = [
         "Stratégie de gestion des avis Google pour les TPE/PME à Orléans. Collecte éthique, réponses professionnelles et monitoring de votre réputation locale.",
     },
   },
-  /* ── 5. Optimisation IA ────────────────────────────────────────────────── */
+  /* ── 5. Création de Sites Web ──────────────────────────────────────────── */
+  {
+    slug: "creation-site-web",
+    title: "Création de Sites Web",
+    tagline: "Un site vitrine clair, rapide et orienté conversion",
+    shortDescription:
+      "Conception de sites web modernes pour TPE/PME : design soigné, performance mobile et structure SEO-ready dès la mise en ligne.",
+    fullDescription: [
+      "Votre site est souvent la première impression de votre entreprise. Un design daté, une navigation confuse ou un site lent font fuir les prospects avant même le premier contact. Un bon site doit inspirer confiance en quelques secondes et guider naturellement vers l'action.",
+      "Je crée des sites vitrines sur mesure pensés pour convertir : architecture claire, textes orientés client, design cohérent avec votre image de marque, version mobile irréprochable et fondations SEO solides. Vous obtenez un site professionnel, facile à maintenir, qui soutient réellement votre développement local.",
+    ],
+    iconPaths: [
+      "M3.75 4.5h16.5A1.5 1.5 0 0 1 21.75 6v12a1.5 1.5 0 0 1-1.5 1.5H3.75A1.5 1.5 0 0 1 2.25 18V6a1.5 1.5 0 0 1 1.5-1.5Z",
+      "M2.25 8.25h19.5",
+      "m9.75 12 2.25 2.25L14.25 12",
+      "m12 14.25 2.25 2.25",
+    ],
+    features: [
+      {
+        title: "Arborescence stratégique",
+        description:
+          "Structure des pages et parcours utilisateur conçus pour rendre votre offre lisible et persuasive.",
+      },
+      {
+        title: "Design sur mesure",
+        description:
+          "Interface moderne, cohérente avec votre identité visuelle et adaptée aux attentes de vos clients.",
+      },
+      {
+        title: "Performance & mobile",
+        description:
+          "Site rapide, responsive et optimisé Core Web Vitals pour une expérience fluide sur smartphone.",
+      },
+      {
+        title: "Base SEO prête",
+        description:
+          "Balises, maillage interne, hiérarchie des contenus et bonnes pratiques techniques intégrées dès le départ.",
+      },
+    ],
+    benefits: [
+      "Image de marque plus crédible en ligne",
+      "Plus de demandes de contact qualifiées",
+      "Meilleure conversion sur mobile",
+      "Fondations solides pour le SEO local",
+    ],
+    ctaText: "Créer mon site web",
+    seo: {
+      title: "Création de Site Web Professionnel — Sitnikov Web Orléans",
+      description:
+        "Création de sites web vitrines pour TPE/PME à Orléans : design moderne, performance mobile et structure optimisée pour convertir.",
+    },
+  },
+  /* ── 6. Optimisation IA ────────────────────────────────────────────────── */
   {
     slug: "optimisation-ia",
     title: "Optimisation IA",

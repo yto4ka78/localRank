@@ -2,6 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { services } from "@/data/services";
 
+const cities = [
+  { name: "Orléans", postalCode: "45000" },
+  { name: "Saran", postalCode: "45770" },
+  { name: "Fleury-les-Aubrais", postalCode: "45400" },
+  { name: "Olivet", postalCode: "45160" },
+  { name: "Saint-Jean-de-la-Ruelle", postalCode: "45140" },
+  { name: "Saint-Jean-de-Braye", postalCode: "45800" },
+  { name: "Ingré", postalCode: "45140" },
+  { name: "La Chapelle-Saint-Mesmin", postalCode: "45380" },
+];
+
 /* ── SEO ──────────────────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
   title: "Services SEO Local Orléans — Sitnikov Web",
@@ -138,6 +149,47 @@ export default function ServicesPage() {
                   </div>
                 </div>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Cities coverage ──────────────────────────────────────────────── */}
+      <section className="bg-white py-16 lg:py-20">
+        <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
+          <div className="mb-8 flex items-center gap-3">
+            <span className="h-px w-10 bg-blue-600" />
+            <span className="text-xs font-bold uppercase tracking-[0.26em] text-blue-600">
+              Zones d&apos;intervention
+            </span>
+          </div>
+
+          <h2
+            className="mb-4 max-w-[760px] font-black leading-[1.08] tracking-tight text-gray-900"
+            style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)" }}
+          >
+            J&apos;accompagne les entreprises d&apos;Orléans et des communes proches
+          </h2>
+
+          <p className="mb-10 max-w-[620px] text-base leading-relaxed text-gray-500">
+            Interventions SEO local adaptées au terrain, avec la même exigence de résultat
+            pour chaque ville du Loiret.
+          </p>
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {cities.map((city) => (
+              <div
+                key={city.name}
+                className="group flex items-center justify-between rounded-2xl bg-[#F8F7F5] px-5 py-4 ring-1 ring-gray-200/70 transition-all duration-200 hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_8px_28px_rgba(0,0,0,0.06)]"
+              >
+                <div>
+                  <p className="text-sm font-bold text-gray-900">{city.name}</p>
+                  <p className="text-xs text-gray-500">{city.postalCode}</p>
+                </div>
+                <span className="rounded-full bg-blue-50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-blue-600">
+                  SEO local
+                </span>
+              </div>
             ))}
           </div>
         </div>

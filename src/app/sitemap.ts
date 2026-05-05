@@ -3,17 +3,6 @@ import { getAllServiceSlugs } from "@/data/services";
 
 const BASE = "https://eriksitnikov.fr";
 
-const citySlugs = [
-  "orleans",
-  "saran",
-  "fleury-les-aubrais",
-  "olivet",
-  "saint-jean-de-la-ruelle",
-  "saint-jean-de-braye",
-  "ingre",
-  "la-chapelle-saint-mesmin",
-];
-
 export default function sitemap(): MetadataRoute.Sitemap {
   const slugs = getAllServiceSlugs();
 
@@ -23,7 +12,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/portfolio`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/contact`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/faq`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE}/zones`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
   ];
 
   const serviceRoutes: MetadataRoute.Sitemap = slugs.map((slug) => ({
@@ -33,12 +21,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  const zoneRoutes: MetadataRoute.Sitemap = citySlugs.map((slug) => ({
-    url: `${BASE}/zones/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.65,
-  }));
-
-  return [...staticRoutes, ...serviceRoutes, ...zoneRoutes];
+  return [...staticRoutes, ...serviceRoutes];
 }
