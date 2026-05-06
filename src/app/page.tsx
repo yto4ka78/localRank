@@ -1048,7 +1048,7 @@ function ServicesSection() {
             href="/services"
             className="group hidden items-center gap-2.5 text-sm font-semibold text-gray-600 transition-colors hover:text-blue-600 lg:flex"
           >
-            Voir tous les services
+            Voir tous les services SEO a Orleans
             <span className="flex h-7 w-7 items-center justify-center rounded-full border border-gray-300 transition-all group-hover:border-blue-400 group-hover:bg-blue-50">
               <svg
                 className="h-3.5 w-3.5 transition-transform group-hover:translate-x-px"
@@ -1133,7 +1133,7 @@ function ServicesSection() {
 
                 {/* Arrow CTA */}
                 <div className="flex items-center gap-1.5 text-sm font-semibold text-blue-600">
-                  En savoir plus
+                  En savoir plus sur {service.title}
                   <svg
                     className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1"
                     fill="none"
@@ -1159,7 +1159,7 @@ function ServicesSection() {
             href="/services"
             className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-gray-700 shadow-sm transition-all hover:border-blue-200 hover:bg-blue-50 hover:text-blue-600"
           >
-            Voir tous les services
+            Voir tous les services SEO a Orleans
             <svg
               className="h-4 w-4"
               fill="none"
@@ -1206,7 +1206,10 @@ const localBusinessJsonLd = {
   },
   areaServed: { "@type": "City", name: "Orléans" },
   priceRange: "€€",
-  sameAs: [],
+  sameAs: [
+    "https://maps.app.goo.gl/Rbju1rQvQpfmUJDt8",
+    "https://www.linkedin.com/in/erik-sitnikov-967227317/",
+  ],
 };
 
 export default function HomePage() {
@@ -1214,7 +1217,9 @@ export default function HomePage() {
     <main className="overflow-x-hidden">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessJsonLd),
+        }}
       />
       <HeroSection />
       <AboutSection />

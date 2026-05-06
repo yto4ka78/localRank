@@ -137,7 +137,7 @@ export default function ServicesPage() {
 
                   {/* CTA */}
                   <div className="flex items-center gap-1.5 text-sm font-semibold text-blue-600 transition-gap duration-200 group-hover:gap-2.5">
-                    Découvrir
+                    Découvrir {service.title}
                     <svg
                       className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
                       fill="none"

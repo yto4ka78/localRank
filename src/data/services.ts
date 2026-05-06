@@ -36,7 +36,7 @@ export const services: Service[] = [
     title: "Google Business Profile",
     tagline: "Soyez visible là où vos clients vous cherchent",
     shortDescription:
-      "Optimisation complète de votre fiche GBP pour apparaître en tête du pack Google Maps local.",
+      "Optimisation complète de votre fiche Google Business Profile à Orléans pour apparaître dans le pack local Google Maps.",
     fullDescription: [
       "Votre fiche Google Business Profile est souvent le premier — et parfois le seul — point de contact entre votre entreprise et un client local. Une fiche mal configurée (mauvaises catégories, photos absentes, horaires incorrects) vous fait perdre des appels chaque jour, en silence.",
       "J'audite, restructure et optimise intégralement votre profil : catégories principales et secondaires, attributs, services détaillés, description avec mots-clés locaux, stratégie photo, posts réguliers et gestion des questions-réponses. Résultat : une fiche qui convertit les recherches locales en contacts réels.",
@@ -75,19 +75,19 @@ export const services: Service[] = [
     ],
     ctaText: "Optimiser ma fiche Google",
     seo: {
-      title: "Optimisation Google Business Profile — Sitnikov Web Orléans",
+      title: "Google Business Profile Orléans — Optimisation Google Maps",
       description:
-        "Optimisez votre fiche Google Business Profile pour apparaître en tête des résultats locaux à Orléans. Plus d'appels, plus de clients.",
+        "Optimisation de fiche Google Business Profile à Orléans (Orleans) pour gagner en visibilité sur Google Maps et générer plus d'appels clients.",
     },
   },
 
   /* ── 2. SEO Local ──────────────────────────────────────────────────────── */
   {
     slug: "seo-local",
-    title: "SEO Local",
+    title: "SEO Local à Orléans",
     tagline: "Dominez les résultats Google dans votre zone",
     shortDescription:
-      "Stratégie SEO local complète pour attirer des clients qualifiés dans votre zone de chalandise.",
+      "Stratégie de référencement local à Orléans pour attirer des clients qualifiés dans votre zone de chalandise.",
     fullDescription: [
       "Le SEO local consiste à optimiser votre présence en ligne pour apparaître en priorité lorsque des clients proches de vous recherchent vos services. C'est le levier le plus rentable pour les TPE/PME avec une clientèle de proximité — sans dépendre d'un budget publicitaire permanent.",
       "J'analyse votre situation actuelle, identifie les mots-clés locaux à fort potentiel, et déploie une stratégie durable : optimisation on-page, cohérence des citations locales (NAP), maillage interne et création de contenu géolocalisé. L'objectif est un positionnement solide et pérenne sur votre territoire.",
@@ -125,19 +125,19 @@ export const services: Service[] = [
     ],
     ctaText: "Améliorer mon SEO local",
     seo: {
-      title: "SEO Local Orléans — Référencement Naturel Local — Sitnikov Web",
+      title: "SEO Local Orléans — Référencement local TPE/PME",
       description:
-        "Stratégie de référencement SEO local pour TPE/PME à Orléans. Améliorez votre positionnement Google et attirez plus de clients dans votre zone.",
+        "Référencement local pour TPE/PME à Orléans (Orleans) : audit SEO, mots-clés locaux et optimisation on-page pour mieux vous positionner sur Google.",
     },
   },
 
   /* ── 3. Optimisation Site Web ──────────────────────────────────────────── */
   {
     slug: "optimisation-site-web",
-    title: "Optimisation Site Web",
+    title: "Optimisation de Site Web à Orléans",
     tagline: "Votre site, premier commercial 24h/24",
     shortDescription:
-      "Audit et optimisation de votre site pour la performance mobile, la vitesse et la conversion.",
+      "Audit et optimisation de site internet à Orléans pour la performance mobile, la vitesse de chargement et la conversion.",
     fullDescription: [
       "La majorité de vos clients potentiels vous cherchent depuis leur téléphone. Un site lent, mal structuré ou difficile à naviguer sur mobile représente une perte directe de clients — souvent sans que vous vous en rendiez compte.",
       "J'audite votre site existant et interviens sur les points bloquants : vitesse de chargement (Core Web Vitals), adaptation mobile, clarté du message et facilité de contact. L'objectif est que chaque visiteur puisse vous appeler ou vous écrire en moins de 3 clics, depuis n'importe quel appareil.",
@@ -175,9 +175,9 @@ export const services: Service[] = [
     ],
     ctaText: "Optimiser mon site",
     seo: {
-      title: "Optimisation Site Web Mobile & Performance — Sitnikov Web",
+      title: "Optimisation Site Web Orléans — Vitesse, Mobile, Conversion",
       description:
-        "Audit et optimisation de votre site web pour la performance mobile, la vitesse de chargement et la conversion. Orléans et alentours.",
+        "Optimisation de site web et site internet à Orléans : Core Web Vitals, UX mobile et conversion pour transformer plus de visiteurs en demandes de contact.",
     },
   },
 
@@ -187,7 +187,7 @@ export const services: Service[] = [
     title: "E-Réputation & Avis",
     tagline: "Construisez la confiance qui convertit",
     shortDescription:
-      "Stratégie de gestion des avis Google pour bâtir une réputation solide et rassurante.",
+      "Stratégie de gestion des avis Google à Orléans pour bâtir une réputation locale solide et rassurante.",
     fullDescription: [
       "Les avis Google sont l'un des facteurs les plus influents dans la décision d'un client local. Un profil sans avis récents — ou pire, avec des avis négatifs sans réponse — fait fuir les clients avant même qu'ils ne vous contactent.",
       "Je vous aide à mettre en place une stratégie simple et éthique pour collecter des avis réguliers, gérer les retours négatifs constructivement et utiliser votre réputation comme levier de conversion et de référencement local.",
@@ -225,18 +225,18 @@ export const services: Service[] = [
     ],
     ctaText: "Améliorer ma réputation",
     seo: {
-      title: "Gestion E-Réputation & Avis Google — Sitnikov Web Orléans",
+      title: "Avis Google Orléans — Gestion e-réputation locale",
       description:
-        "Stratégie de gestion des avis Google pour les TPE/PME à Orléans. Collecte éthique, réponses professionnelles et monitoring de votre réputation locale.",
+        "Gestion des avis Google à Orléans (Orleans) pour TPE/PME : collecte éthique, réponses professionnelles et suivi de votre e-réputation locale.",
     },
   },
   /* ── 5. Création de Sites Web ──────────────────────────────────────────── */
   {
     slug: "creation-site-web",
-    title: "Création de Sites Web",
+    title: "Création de Sites Web à Orléans",
     tagline: "Un site vitrine clair, rapide et orienté conversion",
     shortDescription:
-      "Conception de sites web modernes pour TPE/PME : design soigné, performance mobile et structure SEO-ready dès la mise en ligne.",
+      "Création de site internet et site vitrine à Orléans pour TPE/PME : design soigné, performance mobile et structure SEO-ready dès la mise en ligne.",
     fullDescription: [
       "Votre site est souvent la première impression de votre entreprise. Un design daté, une navigation confuse ou un site lent font fuir les prospects avant même le premier contact. Un bon site doit inspirer confiance en quelques secondes et guider naturellement vers l'action.",
       "Je crée des sites vitrines sur mesure pensés pour convertir : architecture claire, textes orientés client, design cohérent avec votre image de marque, version mobile irréprochable et fondations SEO solides. Vous obtenez un site professionnel, facile à maintenir, qui soutient réellement votre développement local.",
@@ -277,18 +277,18 @@ export const services: Service[] = [
     ],
     ctaText: "Créer mon site web",
     seo: {
-      title: "Création de Site Web Professionnel — Sitnikov Web Orléans",
+      title: "Création de Sites Web à Orléans — Sitnikov Web",
       description:
-        "Création de sites web vitrines pour TPE/PME à Orléans : design moderne, performance mobile et structure optimisée pour convertir.",
+        "Création de site web, site internet et site vitrine à Orléans (Orleans) pour TPE/PME : design moderne, SEO technique et conversion orientée résultats.",
     },
   },
   /* ── 6. Optimisation IA ────────────────────────────────────────────────── */
   {
     slug: "optimisation-ia",
-    title: "Optimisation IA",
+    title: "Optimisation IA pour TPE/PME à Orléans",
     tagline: "Intégrez l'intelligence artificielle dans votre quotidien",
     shortDescription:
-      "Accompagnement personnalisé pour intégrer les outils IA dans votre activité : contenu, automatisation, service client et productivité.",
+      "Accompagnement IA à Orléans pour intégrer les bons outils dans votre activité : contenu, automatisation, service client et productivité.",
     fullDescription: [
       "L'intelligence artificielle n'est plus réservée aux grandes entreprises. Aujourd'hui, les TPE/PME qui intègrent les bons outils IA dans leur quotidien gagnent un avantage concurrentiel réel — moins de temps perdu sur les tâches répétitives, plus de cohérence dans leur communication, et une capacité à produire davantage avec les mêmes ressources.",
       "Je vous aide à identifier les outils adaptés à votre secteur, à les configurer correctement, et à former votre équipe à les utiliser efficacement. De la génération de contenu SEO à l'automatisation des réponses clients, chaque usage est choisi pour un impact concret et mesurable sur votre activité.",
@@ -327,9 +327,9 @@ export const services: Service[] = [
     ],
     ctaText: "Intégrer l'IA dans mon activité",
     seo: {
-      title: "Optimisation IA pour TPE/PME — Sitnikov Web Orléans",
+      title: "Automatisation IA Orléans — Accompagnement TPE/PME",
       description:
-        "Intégrez l'intelligence artificielle dans votre activité à Orléans : outils IA, automatisation, contenu SEO et formation. Accompagnement personnalisé pour TPE/PME.",
+        "Accompagnement en automatisation IA à Orléans (Orleans) pour TPE/PME : choix d'outils, workflows de contenu SEO et formation opérationnelle.",
     },
   },
 ];
