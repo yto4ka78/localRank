@@ -735,7 +735,8 @@ function ShowcaseSection() {
                   {p3.description}
                 </p>
                 <Link
-                  href={`/portfolio/${p3.slug}`}
+                  href="https://bolderiz.netlify.app/"
+                  target="_blank"
                   className="group inline-flex items-center gap-2 text-sm font-semibold text-blue-600 transition-all hover:gap-3"
                 >
                   Voir le projet
